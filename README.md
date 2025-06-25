@@ -1,36 +1,135 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Purplerain HR CRM - Admin Panel
 
-## Getting Started
+A comprehensive Human Resource CRM system for managing end-to-end hiring, onboarding, and documentation processes for interns and employees.
 
-First, run the development server:
+## 🚀 Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### Admin Panel Components
+- **Job Post Assignment** - Assign job posting tasks to HR interns
+- **HR Flow Assignment** - Configure workflow stages and assign interns
+- **Department Monitor Management** - Assign department monitors
+- **All Intern Profiles Dashboard** - Comprehensive intern progress view
+
+## 🛠️ Tech Stack
+
+- **Frontend**: Next.js 14 with TypeScript
+- **Styling**: Tailwind CSS with custom Purplerain theme
+- **Icons**: Lucide React
+- **Database**: Supabase (ready for integration)
+- **Deployment**: Vercel
+
+## 📦 Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   cd purplerain-hr-crm
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Run the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
+
+## 🎨 Design System
+
+### Color Palette
+- **Primary**: #5D5FEF (Indigo Blue)
+- **Accent**: #F97316 (Orange)
+- **Background**: #F9FAFB
+- **Card**: #FFFFFF
+- **Border**: #E5E7EB
+- **Success**: #10B981
+- **Error**: #EF4444
+- **Info**: #2563EB
+
+### Components
+- Reusable UI components (Button, Card, StatusBadge)
+- Responsive layout with sidebar navigation
+- Form validation and multi-select functionality
+- Data tables with search and filtering
+
+## 📁 Project Structure
+
+```
+src/
+├── app/
+│   ├── admin/
+│   │   ├── page.tsx                    # Admin Dashboard
+│   │   ├── job-assignment/page.tsx     # Job Assignment
+│   │   ├── hr-flow/page.tsx           # HR Flow
+│   │   ├── department-monitors/page.tsx # Department Monitors
+│   │   └── intern-profiles/page.tsx    # Intern Profiles
+├── components/
+│   ├── admin/                         # Admin-specific components
+│   ├── ui/                           # Reusable UI components
+│   └── layout/                       # Layout components
+├── data/                             # Mock data
+├── lib/                              # Utilities and types
+└── styles/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🔧 Available Scripts
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+- `npm run start` - Start production server
+- `npm run lint` - Run ESLint
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## 📋 Admin Panel Features
 
-## Learn More
+### 1. Job Post Assignment
+- Create job postings with title and description
+- Select multiple platforms (LinkedIn, Indeed, etc.)
+- Choose target countries
+- Assign multiple HR interns
+- Form validation and submission
 
-To learn more about Next.js, take a look at the following resources:
+### 2. HR Flow Assignment
+- Visual workflow representation
+- 8-stage process from job posting to Slack invitation
+- Assign interns to each workflow stage
+- Save and update flow configurations
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 3. Department Monitor Management
+- Manage 6 departments (Social Media, Development, Design, Marketing, Content, Operations)
+- Assign/reassign department monitors
+- View department statistics and metrics
+- Monitor performance tracking
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+### 4. Intern Profiles Dashboard
+- Comprehensive intern data table
+- Search and filter functionality
+- Status tracking (Pending, In Progress, Completed)
+- Document management
+- Export capabilities
+- Bulk actions
 
-## Deploy on Vercel
+## 🔮 Future Enhancements
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Supabase database integration
+- WhatsApp API notifications
+- Real-time updates
+- Advanced analytics
+- Role-based permissions
+- Document upload functionality
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Test thoroughly
+5. Submit a pull request
+
+## 📄 License
+
+This project is licensed under the MIT License.
