@@ -1,7 +1,7 @@
 import { cn } from '@/lib/utils';
 
 interface StatusBadgeProps {
-  status: 'Pending' | 'In Progress' | 'Completed' | 'Draft' | 'Posted' | 'Closed' | 'Not Sent' | 'Sent' | 'Joined';
+  status: 'Pending' | 'In Progress' | 'Completed' | 'Draft' | 'Posted' | 'Closed' | 'Not Sent' | 'Sent' | 'Joined' | 'Uploaded' | 'Missing';
   className?: string;
 }
 
@@ -11,6 +11,7 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
       case 'Completed':
       case 'Posted':
       case 'Joined':
+      case 'Uploaded':
         return 'bg-green-100 text-green-800 border-green-200';
       case 'In Progress':
       case 'Sent':
@@ -21,6 +22,8 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
         return 'bg-yellow-100 text-yellow-800 border-yellow-200';
       case 'Closed':
         return 'bg-gray-100 text-gray-800 border-gray-200';
+      case 'Missing':
+        return 'bg-red-100 text-red-800 border-red-200';
       default:
         return 'bg-red-100 text-red-800 border-red-200';
     }
