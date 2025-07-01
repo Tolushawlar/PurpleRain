@@ -264,7 +264,9 @@ export function JobPostAssignment() {
                         </p>
                       </div>
                       {job.whatsappAlert && (
-                        <MessageSquare className="h-5 w-5 text-green-600" title="WhatsApp alerts enabled" />
+                        <span title="WhatsApp alerts enabled">
+                          <MessageSquare className="h-5 w-5 text-green-600" />
+                        </span>
                       )}
                     </div>
                     <div className="space-y-2">
