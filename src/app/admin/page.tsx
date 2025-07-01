@@ -20,24 +20,34 @@ export default function AdminDashboard() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-          {stats.map((stat) => (
-            <Card key={stat.title}>
-              <CardContent className="p-6">
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium text-purplerain-text-secondary">
-                      {stat.title}
-                    </p>
-                    <p className="text-2xl font-bold text-purplerain-text-primary">
-                      {stat.value}
-                    </p>
+        <div className="grid grid-cols-4 gap-6">
+          {stats.map((stat, index) => {
+            const gradients = [
+              'bg-gradient-to-br from-blue-500 to-blue-600',
+              'bg-gradient-to-br from-green-500 to-green-600', 
+              'bg-gradient-to-br from-purple-500 to-purple-600',
+              'bg-gradient-to-br from-orange-500 to-orange-600'
+            ];
+            return (
+              <Card key={stat.title} className="overflow-hidden">
+                <CardContent className="p-0 text-red-500">
+                  <div className={`${gradients[index]} p-6 text-black`}>
+                    <div className="flex items-center justify-between">
+                      <div>
+                        <p className="text-sm font-medium text-black/90">
+                          {stat.title}
+                        </p>
+                        <p className="text-3xl font-bold text-black mt-2">
+                          {stat.value}
+                        </p>
+                      </div>
+                      <stat.icon className="h-12 w-12 text-black/80" />
+                    </div>
                   </div>
-                  <stat.icon className={`h-8 w-8 ${stat.color}`} />
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">

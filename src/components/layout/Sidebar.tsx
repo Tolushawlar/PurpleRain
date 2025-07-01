@@ -23,11 +23,11 @@ export function Sidebar() {
   const pathname = usePathname();
 
   return (
-    <div className="flex h-full w-64 flex-col bg-purplerain-card border-r border-purplerain-border">
-      <div className="flex h-16 items-center px-6 border-b border-purplerain-border">
-        <h1 className="text-xl font-bold text-purplerain-primary">Purplerain HR</h1>
+    <div className="flex h-full w-64 flex-col bg-blue-600">
+      <div className="flex h-16 items-center px-6 border-b border-white/20">
+        <h1 className="text-xl font-bold text-white">Purplerain HR</h1>
       </div>
-      <nav className="flex-1 space-y-1 px-4 py-4">
+      <nav className="flex-1 space-y-2 px-4 py-4">
         {navigation.map((item) => {
           const isActive = pathname === item.href;
           return (
@@ -35,16 +35,16 @@ export function Sidebar() {
               key={item.name}
               href={item.href}
               className={cn(
-                'group flex items-center px-3 py-2 text-sm font-medium rounded-md transition-colors',
+                'group flex items-center px-4 py-3 text-sm font-medium rounded-lg transition-all duration-200 transform',
                 isActive
-                  ? 'bg-purplerain-primary text-white'
-                  : 'text-purplerain-text-secondary hover:bg-purplerain-bg hover:text-purplerain-text-primary'
+                  ? 'bg-white text-blue-600 shadow-lg scale-105 font-semibold'
+                  : 'text-white hover:bg-blue-500 hover:scale-102 hover:shadow-md active:scale-95'
               )}
             >
               <item.icon
                 className={cn(
-                  'mr-3 h-5 w-5 flex-shrink-0',
-                  isActive ? 'text-white' : 'text-purplerain-text-secondary'
+                  'mr-3 h-5 w-5 flex-shrink-0 transition-colors duration-200',
+                  isActive ? 'text-blue-600' : 'text-white group-hover:text-white'
                 )}
               />
               {item.name}

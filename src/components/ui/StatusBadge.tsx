@@ -22,14 +22,14 @@ export function StatusBadge({ status, className }: StatusBadgeProps) {
       case 'Closed':
         return 'bg-gray-100 text-gray-800 border-gray-200';
       default:
-        return 'bg-gray-100 text-gray-800 border-gray-200';
+        return 'bg-red-100 text-red-800 border-red-200';
     }
   };
 
   return (
     <span
       className={cn(
-        'inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium border',
+        'inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border',
         getStatusStyles(status),
         className
       )}

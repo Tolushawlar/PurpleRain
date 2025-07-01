@@ -6,9 +6,9 @@ interface AdminLayoutProps {
 
 export function AdminLayout({ children }: AdminLayoutProps) {
   return (
-    <div className="flex h-screen bg-purplerain-bg">
+    <div className="flex h-screen bg-black text-white">
       <Sidebar />
-      <main className="flex-1 overflow-auto">
+      <main className="flex-1 overflow-auto ">
         <div className="p-8">
           {children}
         </div>
